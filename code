@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class sphere {
+private:
+	double radius;
+	int xPos;
+	int yPos;
+	int zPos;
+	int color;
+
+public:
+	void init(double r, int x, int y, int z);
+	void surfaceArea();
+	void volume();
+};
+
+int main() {
+
+	double rad;
+	cin >> rad;
+	sphere one;
+	one.init(rad, 10, 10, 10);
+}
+
+void sphere::init(double r, int x, int y, int z) {
+	radius = r;
+	xPos = x;
+	yPos = y;
+	zPos = z;
+
+}
+void sphere::surfaceArea() {
+	cout << 4 * 3.14 * (radius * radius);
+}
+void sphere::volume() {
+	cout << 1.3333333 * 3.14 * (radius * radius * radius);
+}
